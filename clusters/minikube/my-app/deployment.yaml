@@ -19,7 +19,7 @@ spec:
         kubernetes.io/hostname: minikube  # Ensures it runs on Minikube node
       containers:
       - name: my-app
-        image: nginx
+        image: ok:1.2.3
         ports:
         - containerPort: 80
 
