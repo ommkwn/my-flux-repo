@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
-  namespace: flux-system  # Add this line
+  namespace: my-namespace  # Ensure the namespace exists
 spec:
   replicas: 1
   selector:
@@ -13,6 +13,8 @@ spec:
       labels:
         app: my-app
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: minikube  # Ensures it runs on Minikube node
       containers:
       - name: my-app
         image: my-app-image:latest
