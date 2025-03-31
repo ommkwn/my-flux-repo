@@ -2,9 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
-  namespace: flux-system  # Add this line
-  labels:
-    app: my-app
+  namespace: my-namespace  # Ensure the namespace exists
 spec:
   replicas: 1
   selector:
@@ -20,6 +18,3 @@ spec:
       containers:
       - name: my-app
         image: nginx
-        ports:
-        - containerPort: 80
-
