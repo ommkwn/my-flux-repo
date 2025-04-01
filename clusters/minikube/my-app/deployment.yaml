@@ -10,7 +10,7 @@ spec:
       chart: opensearch
       version: 2.32.0  # Use latest version
       sourceRef:
-        kind: HelmRepository
+        kind: HelmRep
         name: opensearch
   values:
     replicas: 1
