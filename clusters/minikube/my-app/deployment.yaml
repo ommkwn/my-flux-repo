@@ -13,8 +13,8 @@ spec:
         kind: HelmRepository
         name: opensearch
   values:
-    replicas: 1
-    singleNode: true
+    replicas: 3
+    singleNode: false
     persistence:
       enabled: false
     resources:
