@@ -8,9 +8,9 @@ spec:
   chart:
     spec:
       chart: opensearch
-      version: 2.32.0  # Use latest version
+      version: 2.4.2  # Use latest version
       sourceRef:
-        kind: HelmRep
+        kind: HelmRepository
         name: opensearch
   values:
     replicas: 1
